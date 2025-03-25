@@ -1,8 +1,8 @@
 .idea/
 .vscode/
-outputs/
-eval_outputs/
-eval_output/
-model_weights/
+
 saved/
+
 **/__pycache__/
+
+third_party/pointnet2/build/

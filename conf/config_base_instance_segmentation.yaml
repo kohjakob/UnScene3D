@@ -59,11 +59,12 @@ general:
   gpus: 1
 
 defaults:
+  - _self_
   - data: indoor
   - data/data_loaders: simple_loader
   - data/datasets: scannet
   - data/collation_functions: voxelize_collate
-  - logging: full
+  - logging: "offline"
   - model: mask3d
   - metrics: miou
   - optimizer: adamw
@@ -80,3 +81,5 @@ hydra:
     dir: saved/hydra_logs/${now:%Y-%m-%d}/${now:%H-%M-%S}
     # dir: ${general.save_dir}
     subdir: ${hydra.job.num}_${hydra.job.id}
+  job:
+    chdir: True

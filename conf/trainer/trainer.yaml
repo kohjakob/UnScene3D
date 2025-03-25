@@ -1,4 +1,4 @@
-# @package _group_
+
 deterministic: false
 max_epochs: 1000
 min_epochs: 1

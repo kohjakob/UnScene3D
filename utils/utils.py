@@ -337,7 +337,7 @@ def image_grid(
 
     plt.show()
 
-class OrderedSet(collections.Set):
+class OrderedSet(collections.abc.Set):
     def __init__(self, iterable=()):
         self.d = collections.OrderedDict.fromkeys(iterable)
 
